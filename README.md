@@ -1,5 +1,9 @@
 # Movie Picture - Full Stack CI/CD Project
 
+## Demo Link
+
+http://a89a28e96cac34602b0d4cdd2621e072-243378103.us-east-1.elb.amazonaws.com/
+
 ## Project Overview
 
 This project is a full-stack Movie Picture application developed using React and Python Flask and deployed using Docker, Kubernetes, Amazon Web Services (AWS), Amazon Elastic Kubernetes Service (EKS), and GitHub Actions.
