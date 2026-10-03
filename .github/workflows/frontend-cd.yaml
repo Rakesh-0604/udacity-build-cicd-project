@@ -85,12 +85,13 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
+
       - name: Build frontend Docker image
-  run: |
-    docker build \
-      --build-arg REACT_APP_MOVIE_API_URL=http://a8ffca64f1bb4fe98999dc90a8eb695-1986836182.us-east-1.elb.amazonaws.com \
-      -t ${{ steps.login-ecr.outputs.registry }}/frontend:${GITHUB_SHA} \
-      ./starter/frontend
+        run: |
+          docker build \
+            --build-arg REACT_APP_MOVIE_API_URL=http://a8ffcc6a4fb1b4fe98999dc90a8eb695-1986836182.us-east-1.elb.amazonaws.com \
+            -t ${{ steps.login-ecr.outputs.registry }}/frontend:${GITHUB_SHA} \
+            ./starter/frontend
 
       - name: Push frontend image to ECR
         run: |
